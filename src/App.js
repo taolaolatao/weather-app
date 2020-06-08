@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const api = {
 	key: '9af6cd68130f3da7437aeabdc87cd4c8',
-	url: 'http://api.openweathermap.org/data/2.5/'
+	url: 'https://api.openweathermap.org/data/2.5/'
 }
 
 const App = () => {
@@ -14,7 +14,6 @@ const App = () => {
 			const res = await fetch(`${api.url}weather?q=${query}&units=metric&appid=${api.key}`)
 			const result = await res.json();
 			setWeather(result);
-			console.log(result);
 		}
 	}
 
